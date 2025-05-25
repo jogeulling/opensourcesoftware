@@ -41,15 +41,9 @@ public class SimpleInfiniteParallax : MonoBehaviour {
 
 	//our 4 layerSprites
 	private GameObject obj1;
-	private GameObject obj2;
-	private GameObject obj3;
-	private GameObject obj4;
 
 	//our 4 layerSprite positions
 	private Vector2 obj1p;
-	private Vector2 obj2p;
-	private Vector2 obj3p;
-	private Vector2 obj4p;
 	
 	void Awake () {
 		size = layerSprite.GetComponent<Renderer> ().bounds.size;
@@ -57,14 +51,8 @@ public class SimpleInfiniteParallax : MonoBehaviour {
 	
 		//instantiate all 4 objects
 		obj1 = layerSprite;
-		obj2 = Instantiate (layerSprite);
-		obj3 = Instantiate (layerSprite);
-		obj4 = Instantiate (layerSprite);
-
+		
 		obj1p = new Vector3 ();
-		obj2p = new Vector3 ();
-		obj3p = new Vector3 ();
-		obj4p = new Vector3 ();
 	}
 
 	void LateUpdate () {
@@ -74,21 +62,9 @@ public class SimpleInfiniteParallax : MonoBehaviour {
 		center.y = f (parent.transform.position.y, depth, size.y);
 
 		//update 4 object positions
-		obj1p.x = center.x + size.x / 2;
-		obj1p.y = center.y + size.y / 2;
+		obj1p.x = center.x;
+		obj1p.y = center.y;
 		obj1.transform.position = obj1p;
-
-		obj2p.x = center.x - size.x / 2;
-		obj2p.y = center.y + size.y / 2;
-		obj2.transform.position = obj2p;
-
-		obj3p.x = center.x - size.x / 2;
-		obj3p.y = center.y - size.y / 2;
-		obj3.transform.position = obj3p;
-
-		obj4p.x = center.x + size.x / 2;
-		obj4p.y = center.y - size.y / 2;
-		obj4.transform.position = obj4p;
 	}
 
 	//p = position, in this scenario, x or y
