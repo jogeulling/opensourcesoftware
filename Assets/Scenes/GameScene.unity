@@ -275,6 +275,7 @@ GameObject:
   - component: {fileID: 591923082}
   - component: {fileID: 591923084}
   - component: {fileID: 591923083}
+  - component: {fileID: 591923085}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -418,6 +419,21 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &591923085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591923079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 911735f0a44e0da48a8bf4d114501f66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponPrefab: {fileID: 6613354544359346074, guid: cd20bf0b0e1e5374ab62a09570b09395, type: 3}
+  mainCamera: {fileID: 1863209263}
+  speed: 5
 --- !u!1 &711608443
 GameObject:
   m_ObjectHideFlags: 0
@@ -995,7 +1011,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4609841999635311911, guid: ad18b20fbf4a8e8469e7cadd3535c935, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: -0.75
       objectReference: {fileID: 0}
     - target: {fileID: 4609841999635311911, guid: ad18b20fbf4a8e8469e7cadd3535c935, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1056,7 +1072,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3962115772608486304, guid: 4c94260eca24fff47ba8a23e60311882, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.5
+      value: -0.25
       objectReference: {fileID: 0}
     - target: {fileID: 3962115772608486304, guid: 4c94260eca24fff47ba8a23e60311882, type: 3}
       propertyPath: m_LocalPosition.z

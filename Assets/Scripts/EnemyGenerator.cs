@@ -11,6 +11,7 @@ namespace Shmup
         float span = 2f;
         float delta = 0;
         float speed = 3.0f;
+        int maxEnemy = 0;
 
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
@@ -23,10 +24,11 @@ namespace Shmup
         {
             this.delta += Time.deltaTime;
             
-            if (this.delta > this.span)
+            if (this.delta > this.span && this.maxEnemy <= 3)
             {
                 this.delta = 0;
-                
+                this.maxEnemy += 1;
+
                 this.enemy = Instantiate(EnemyPrefab, pathSpline.EvaluatePosition(0f), Quaternion.identity);
 
                 var splineAnim = this.enemy.GetComponent<SplineAnimate>();
