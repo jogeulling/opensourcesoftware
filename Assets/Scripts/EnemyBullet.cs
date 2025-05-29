@@ -24,8 +24,13 @@ namespace Shmup
         {
             if (other.CompareTag("Player"))
             {
+                other.isTrigger = true;
                 this.distroyTime.Cancel();
                 Destroy(gameObject);
+            }
+
+            if (other.CompareTag("Enemybullet")){
+                other.isTrigger = false;
             }
         }
     }

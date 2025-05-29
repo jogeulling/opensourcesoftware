@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using UnityEditor.PackageManager;
+using UnityEngine.SceneManagement;
+using UnityEngine;
 
 namespace Shmup
 {
@@ -15,13 +17,12 @@ namespace Shmup
             this.backgroundend = GameObject.Find("Backgroundendpoint");
             this.cameraend = GameObject.Find("Cameraendpoint");
 
-            transform.position = new Vector3(player.position.x, player.position.y, transform.position.z);
+            if (this.player != null)
+            {
+                transform.position = new Vector3(player.position.x, player.position.y, transform.position.z);
+            }
         }
         void Update()
-        {
-            Clear();
-        }
-        void Clear()
         {
             // Move the camera along the battlefield at a constant speed
             if (this.clear == false)
@@ -29,9 +30,17 @@ namespace Shmup
                 transform.position += Vector3.up * (speed * Time.deltaTime);
             }
 
+            Clear();
+
+            if (this.clear == true)
+            {
+                SceneManager.LoadScene(3);
+            }
+        }
+        void Clear()
+        {
             if (Vector3.Distance(this.cameraend.transform.position, this.backgroundend.transform.position) < threshold)
             {
-                Debug.Log("Game Clear");
                 this.clear = true;
             }
         }

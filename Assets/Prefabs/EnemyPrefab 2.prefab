@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 6712779950802407915}
   - component: {fileID: -2976240374445473798}
   - component: {fileID: 4615540175706402642}
-  m_Layer: 0
+  - component: {fileID: -1673768459745470278}
+  m_Layer: 8
   m_Name: EnemyPrefab 2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -182,6 +183,21 @@ MonoBehaviour:
   endCount: 0
   enemyHealth: 30
   damage: 10
+--- !u!114 &-1673768459745470278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483629756207942585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be33e088ae27254419e7def263a73dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  weaponprefab: {fileID: 2948307257273898063, guid: ff755ef0b0ac3e3428ad2fa91f1ce088, type: 3}
+  pla: {fileID: 0}
 --- !u!1 &3139011218509580576
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,7 +208,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2077438270019901254}
   - component: {fileID: 2629420676362611274}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -280,7 +296,7 @@ GameObject:
   - component: {fileID: 4098104429043709400}
   - component: {fileID: 3122467995872644734}
   - component: {fileID: 557680894683862731}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}

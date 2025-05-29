@@ -1,4 +1,6 @@
 using Unity.VisualScripting;
+using UnityEditor.PackageManager;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
 namespace Shmup
@@ -12,7 +14,6 @@ namespace Shmup
         Transform model;
         SpriteRenderer spriteRenderer;
 
-        bool end = false;
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
         {
@@ -42,6 +43,7 @@ namespace Shmup
                 if (this.health <= 0)
                 {
                     Destroy(gameObject);
+                    SceneManager.LoadScene(2);
                 }
             }
         }

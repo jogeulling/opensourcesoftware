@@ -27,7 +27,6 @@ namespace Shmup
 
             if (this.delta > this.span && this.maxEnemy <= 3)
             {
-                Debug.Log("true");
                 this.delta = 0;
                 this.maxEnemy += 1;
 
