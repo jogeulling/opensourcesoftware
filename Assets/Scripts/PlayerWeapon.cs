@@ -21,7 +21,7 @@ namespace Shmup
                 Vector3 weaponLoc = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
                 GameObject bullet = Instantiate(this.weaponPrefab, weaponLoc, Quaternion.identity);
 
-                bullet.AddComponent<PlayerWeaponMove>().speed = this.speed;
+                bullet.AddComponent<PlayerBullet>().speed = this.speed;
             }
         }
     }

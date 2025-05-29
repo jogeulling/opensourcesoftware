@@ -4,6 +4,8 @@ namespace Shmup
 {
     public class EnemyController : MonoBehaviour
     {
+        public float enemyHealth = 30f;
+        public float damage = 10f;
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
         {
@@ -18,10 +20,15 @@ namespace Shmup
 
         void OnTriggerEnter2D(Collider2D other)
         {
-            Destroy(other.gameObject);
             if (other.CompareTag("bullet"))
             {
-                Destroy(gameObject);
+                this.enemyHealth -= this.damage;
+
+                if (this.enemyHealth <= 0)
+                {
+                    Destroy(gameObject);    
+                }
+                
             }
         }
     }

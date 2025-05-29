@@ -11,7 +11,7 @@ namespace Shmup
         float span = 2f;
         float delta = 0;
         float speed = 3.0f;
-        int maxEnemy = 0;
+        public int maxEnemy = 0;
 
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()

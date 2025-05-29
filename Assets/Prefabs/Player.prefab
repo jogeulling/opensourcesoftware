@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 1099891512449599563}
   - component: {fileID: 9094739576446864436}
   - component: {fileID: -1289350556330591742}
+  - component: {fileID: -7730843342643071521}
+  - component: {fileID: 621068347859631376}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -218,6 +220,45 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.7857498, y: 1.5737529}
   m_EdgeRadius: 0
+--- !u!114 &-7730843342643071521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3606247693320454969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9424219c1987954cadbc35730ae08bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hpbar: {fileID: 0}
+  maxhealth: 50
+  health: 50
+  bulletdamage: 10
+  speed: 0
+--- !u!95 &621068347859631376
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3606247693320454969}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1d9582a4d88a15547983069e2324073f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4171971584609290334
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,7 +357,7 @@ Animator:
   m_GameObject: {fileID: 4171971584609290334}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f5797fd90184e3a46b8113748d7732af, type: 2}
+  m_Controller: {fileID: 9100000, guid: 1d9582a4d88a15547983069e2324073f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

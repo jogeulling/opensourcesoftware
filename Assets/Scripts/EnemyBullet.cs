@@ -7,11 +7,11 @@ namespace Shmup
     {
         public float speed = 5f;
         public float damage = 10f;
-        public float lifeTime = 5f;
+        private Timer distroyTime;
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
         {
-            Timer.Register(2f, () => Destroy(gameObject));
+            distroyTime = Timer.Register(2f, () => Destroy(gameObject));
         }
 
         // Update is called once per frame
@@ -24,6 +24,7 @@ namespace Shmup
         {
             if (other.CompareTag("Player"))
             {
+                this.distroyTime.Cancel();
                 Destroy(gameObject);
             }
         }
