@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 9094739576446864436}
   - component: {fileID: -1289350556330591742}
   - component: {fileID: -7730843342643071521}
-  - component: {fileID: 621068347859631376}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -236,29 +235,6 @@ MonoBehaviour:
   maxhealth: 50
   health: 50
   bulletdamage: 10
-  speed: 0
---- !u!95 &621068347859631376
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3606247693320454969}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1d9582a4d88a15547983069e2324073f, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4171971584609290334
 GameObject:
   m_ObjectHideFlags: 0
@@ -270,7 +246,7 @@ GameObject:
   - component: {fileID: 1885633573859124021}
   - component: {fileID: 2706305825197305304}
   - component: {fileID: 8534462053498495029}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -379,7 +355,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6381682880881627406}
   - component: {fileID: 3115663606406537932}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}

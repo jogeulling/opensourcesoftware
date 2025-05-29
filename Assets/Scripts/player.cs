@@ -9,8 +9,6 @@ namespace Shmup
         public float maxhealth = 50f;
         public float health = 50f;
         public float bulletdamage = 10f;
-        public float speed;
-        float threshold = 0.1f;
         Transform model;
         SpriteRenderer spriteRenderer;
 
@@ -20,7 +18,7 @@ namespace Shmup
         {
             this.hpbar.value = this.health / this.maxhealth;
             this.model = transform.Find("Model");
-            this.spriteRenderer = this.model.GetComponent<SpriteRenderer>();
+            this.spriteRenderer = this.GetComponent<SpriteRenderer>();
         }
 
         // Update is called once per frame
@@ -33,7 +31,7 @@ namespace Shmup
         {
             if (other.CompareTag("Enemy") || other.CompareTag("Enemybullet"))
             {
-                if (gameObject.layer == 3)
+                if (gameObject.CompareTag("Untagged"))
                 {
                     this.health -= this.bulletdamage;
 
@@ -50,18 +48,18 @@ namespace Shmup
 
         void OnDamaged()
         {
-            gameObject.layer = 6;
+            gameObject.tag = "Player";
 
             this.spriteRenderer.color = Color.red;
-
+           
             Invoke("OffDamaged",1);
         }
         void OffDamaged()
         {
-        if (spriteRenderer != null)
+        if (this.spriteRenderer != null)
             {
-                gameObject.layer = 3;
-                spriteRenderer.color = Color.white;
+                gameObject.tag = "Untagged";
+                this.spriteRenderer.color = Color.white;
             }
         }
     }
