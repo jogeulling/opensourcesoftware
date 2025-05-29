@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Shmup
 {
-    public class EnemyController : MonoBehaviour
+    public class EnemyController2 : MonoBehaviour
     {
         public GameObject path;
         public EnemyGenerator enemyGen;
@@ -12,7 +12,7 @@ namespace Shmup
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
         {
-            this.path = GameObject.Find("Path1");
+            this.path = GameObject.Find("Path2");
             this.enemyGen = this.path.GetComponent<EnemyGenerator>();
         }
 

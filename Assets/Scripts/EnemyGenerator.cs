@@ -18,14 +18,16 @@ namespace Shmup
         {
 
         }
+        
 
         // Update is called once per frame
         void Update()
         {
             this.delta += Time.deltaTime;
-            
+
             if (this.delta > this.span && this.maxEnemy <= 3)
             {
+                Debug.Log("true");
                 this.delta = 0;
                 this.maxEnemy += 1;
 
@@ -49,6 +51,11 @@ namespace Shmup
             Vector3 pos = transform.position;
             pos.z = 0f;
             transform.position = pos;
+        }
+
+        public void OnEnemyDestroyed()
+        {
+            this.maxEnemy--;
         }
     }
 }
