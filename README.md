@@ -33,6 +33,15 @@
 - https://github.com/reidscarboro/SimpleInfiniteParallax.git
 - Apache2.0 라이선스
 
+## 작동 방법
+1. Unity 6000.0.42f1 버전을 유니티 허브에서 다운로드
+2. 프로젝트를 열어서 Scenes 폴더 안의 MainScene을 더블 클릭 후 재생 버튼 클릭
+
+## 플레이 방법
+1. wasd 또는 화살표 키들을 누르면 플레이어가 움직임
+2. space바를 누르면 플레이어가 적을 공격함
+3. 맵의 끝까지가면 clear
+
 ## 제작시 참고 링크
 1. https://youtu.be/dBQHtMI-Og4?si=HtQ8vwJiYbjCS2Xg
 2. https://youtu.be/epZFE5Hpbdc?si=57saBuDYiSxUbtE3
